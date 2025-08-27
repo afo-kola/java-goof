@@ -1,0 +1,14 @@
+data:
+  attributes:
+    commit_message: >-
+      {{ jira_ids }}: chore(deps): bump {{package_name}} from {{package_from}}
+      to {{package_to}}
+    description: >
+      {{ #is_upgrade_pr }} This PR has been opened to make sure our repositories
+      are kept up-to-date. It updates {{ package_name }} from version {{
+      package_from }} to version {{ package_to }}. Review relevant docs for
+      possible breaking changes. {{ /is_upgrade_pr }}
+    title: >-
+      {{ jira_ids }} Snyk has created this PR to upgrade {{package_name}} from
+      {{package_from}} to {{package_to}}.
+  type: pull_request_template
